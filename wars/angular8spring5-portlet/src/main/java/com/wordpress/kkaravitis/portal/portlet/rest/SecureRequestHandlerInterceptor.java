@@ -12,6 +12,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.liferay.portal.kernel.util.WebKeys;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 public class SecureRequestHandlerInterceptor extends HandlerInterceptorAdapter {
 	Logger logger = LoggerFactory.getLogger(SecureRequestHandlerInterceptor.class);
 	@Override

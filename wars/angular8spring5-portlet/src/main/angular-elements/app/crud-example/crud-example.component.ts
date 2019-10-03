@@ -19,7 +19,6 @@ export class CrudExampleComponent implements OnInit {
   @Input() config: any;
   apiUrl: string;
   messages: any;
-
   books: Book[];
   book: Book;
   loadingSubject = new BehaviorSubject<boolean>(false);

@@ -16,12 +16,10 @@ const METHOD_MAP = {
 @Injectable()
 export class PortletInterceptor implements HttpInterceptor {
     intercept(req: HttpRequest<any>, next: HttpHandler) : Observable<HttpEvent<any>> {
-        // Resource request accept only the GET and POST http methods.
         const portletReq = req.clone({
             method: METHOD_MAP[req.method.toUpperCase()],
             params: req.params.set(REST_METHOD, req.method)
         });
-        // send the cloned, "secure" request to the next handler.
         return next.handle(portletReq);
     }
 }

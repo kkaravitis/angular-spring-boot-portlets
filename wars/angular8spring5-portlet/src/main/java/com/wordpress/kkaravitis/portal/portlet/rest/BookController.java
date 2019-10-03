@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 @RestController
 public class BookController {
     @Autowired

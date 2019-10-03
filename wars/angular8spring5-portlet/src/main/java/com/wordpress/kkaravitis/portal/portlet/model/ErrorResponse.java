@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Error response on resource request (ajax) error.
  * 
- * @author P70157
+ * @author Konstantinos Karavitis
  **/
 public class ErrorResponse implements Serializable {
 	private static final long serialVersionUID = 1L;

@@ -3,6 +3,9 @@ package com.wordpress.kkaravitis.portal.portlet.model;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 public class BookDTO implements Serializable {
     private String isbn;
     private String title;

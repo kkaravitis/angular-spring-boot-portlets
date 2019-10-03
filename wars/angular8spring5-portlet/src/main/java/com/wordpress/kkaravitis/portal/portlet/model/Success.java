@@ -2,6 +2,9 @@ package com.wordpress.kkaravitis.portal.portlet.model;
 
 import java.io.Serializable;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 public class Success implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

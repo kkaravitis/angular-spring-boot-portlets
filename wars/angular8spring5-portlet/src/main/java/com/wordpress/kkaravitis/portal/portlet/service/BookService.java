@@ -5,6 +5,9 @@ import com.wordpress.kkaravitis.portal.portlet.model.BookDTO;
 
 import java.util.List;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 public interface BookService {
     public List<BookDTO> getBooks();
 

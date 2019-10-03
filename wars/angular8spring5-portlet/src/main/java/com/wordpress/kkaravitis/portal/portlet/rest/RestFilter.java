@@ -10,6 +10,9 @@ import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Map;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 public class RestFilter implements Filter {
 
     private static class RestServiceRequest extends HttpServletRequestWrapper {

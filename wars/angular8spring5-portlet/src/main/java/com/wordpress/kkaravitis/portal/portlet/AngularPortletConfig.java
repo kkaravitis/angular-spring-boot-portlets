@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 public class AngularPortletConfig implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String apiUrl;

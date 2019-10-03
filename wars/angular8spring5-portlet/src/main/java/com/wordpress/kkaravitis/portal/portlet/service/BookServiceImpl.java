@@ -12,6 +12,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author Konstantinos Karavitis
+ **/
 @Service("bookService")
 public class BookServiceImpl implements BookService {
 
