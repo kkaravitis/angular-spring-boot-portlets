@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="book.model.Book">
+		<field name="uuid" type="String" />
+		<field name="isbn" type="String" />
+		<field name="title" type="String" />
+		<field name="author" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,15 @@
+com/wordpress/kkaravitis/portal/portlet/CrudExamplePortlet.class
+com/wordpress/kkaravitis/portal/portlet/rest/BookController.class
+com/wordpress/kkaravitis/portal/portlet/model/Success.class
+com/wordpress/kkaravitis/portal/portlet/model/ErrorResponse.class
+com/wordpress/kkaravitis/portal/portlet/service/BookService.class
+com/wordpress/kkaravitis/portal/portlet/rest/ApplicationExceptionControllerAdvice.class
+com/wordpress/kkaravitis/portal/portlet/rest/SecureRequestHandlerInterceptor.class
+com/wordpress/kkaravitis/portal/portlet/AbstractAngularPortlet.class
+com/wordpress/kkaravitis/portal/portlet/exception/ErrorCode.class
+com/wordpress/kkaravitis/portal/portlet/rest/RestFilter$RestServiceRequest.class
+com/wordpress/kkaravitis/portal/portlet/rest/RestFilter.class
+com/wordpress/kkaravitis/portal/portlet/exception/ApplicationException.class
+com/wordpress/kkaravitis/portal/portlet/AngularPortletConfig.class
+com/wordpress/kkaravitis/portal/portlet/model/BookDTO.class
+com/wordpress/kkaravitis/portal/portlet/service/BookServiceImpl.class

@@ -1,0 +1,14 @@
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/exception/ErrorCode.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/rest/SecureRequestHandlerInterceptor.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/AngularPortletConfig.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/rest/BookController.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/rest/ApplicationExceptionControllerAdvice.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/CrudExamplePortlet.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/AbstractAngularPortlet.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/service/BookServiceImpl.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/model/BookDTO.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/model/ErrorResponse.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/service/BookService.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/model/Success.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/rest/RestFilter.java
+/home/kostas/java/github/liferay-7.2-angular8-spring5-portlet/wars/angular8spring5-portlet/src/main/java/com/wordpress/kkaravitis/portal/portlet/exception/ApplicationException.java
