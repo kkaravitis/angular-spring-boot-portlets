@@ -1,8 +1,8 @@
 # Deploy process
-1) npm install
-2) npm run build:portlet
-3) mvn install
-4) mvn verify
+1) <code> npm install </code>
+2) <code> npm run build:portlet </code>
+3) <code> mvn install </code>
+4) <code> mvn verify </code>
 
 
 
