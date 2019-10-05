@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
     <artifactId>com-wordpress-kkaravitis-portal-modules</artifactId>
-    <groupId>com.wordpress.kkaravitis.portal</groupId>
+    <groupId>com.wordpress.kkaravitis.modules</groupId>
     <version>1.0.0</version>
   </parent>
 	<groupId>book</groupId>
