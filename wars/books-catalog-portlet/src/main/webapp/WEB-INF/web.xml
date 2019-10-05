@@ -1,0 +1,37 @@
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<context-param>
+		<param-name>portalListenerClasses</param-name>
+		<param-value>com.liferay.portal.kernel.servlet.SerializableSessionAttributeListener,org.springframework.web.context.ContextLoaderListener</param-value>
+	</context-param>
+
+	<filter>
+		<filter-name>restFilter</filter-name>
+		<filter-class>com.wordpress.kkaravitis.modules.books.catalog.rest.RestFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>restFilter</filter-name>
+		<url-pattern>/rest/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>restful</servlet-name>
+		<servlet-class>
+			org.springframework.web.servlet.DispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/restful-servlet.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>throwExceptionIfNoHandlerFound</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>restful</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+</web-app>
