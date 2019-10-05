@@ -24,3 +24,4 @@
 /plugins-sdk/lib
 test-results
 **/target
+**/.factorypath

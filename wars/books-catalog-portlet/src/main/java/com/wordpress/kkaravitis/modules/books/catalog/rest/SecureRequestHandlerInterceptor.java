@@ -28,6 +28,7 @@ public class SecureRequestHandlerInterceptor extends HandlerInterceptorAdapter {
 			response.getWriter().write(new ObjectMapper().writeValueAsString(error));
 			return false;
 		}
+
 		return true;
 	}
 }

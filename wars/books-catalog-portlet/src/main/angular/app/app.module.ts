@@ -39,14 +39,14 @@ import { ConfigurationService } from './configuration.service';
     BooksCatalogComponent
   ],
    //Uncomment bootstrap to run the TestComponent as an independent app 
-   bootstrap: [TestComponent]
+   //bootstrap: [TestComponent]
 })
 
 export class AppModule {
   // Comment out the constructor and ngDoBootstrap method when you want to bootstrap the TestComponent.
   
-  // constructor(private injector: Injector) {
-  //     customElements.define('crud-example', createCustomElement(BooksCatalogComponent, { injector }));
-  // }
-  // ngDoBootstrap() {}
+  constructor(private injector: Injector) {
+      customElements.define('books-catalog', createCustomElement(BooksCatalogComponent, { injector }));
+  }
+  ngDoBootstrap() {}
 }
