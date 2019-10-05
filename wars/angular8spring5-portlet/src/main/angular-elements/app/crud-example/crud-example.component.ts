@@ -5,32 +5,31 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MessageService } from '../messages/message.service';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
+import { ConfigurationService } from '../configuration.service';
 
 @Component({
   selector: 'crud-example',
   templateUrl: './crud-example.component.html',
   styleUrls: ['./crud-example.component.css'],
   providers: [
+    ConfigurationService,
     MessageService, 
     BooksService
   ]
 })
 export class CrudExampleComponent implements OnInit {
-  @Input() config: any;
-  apiUrl: string;
-  messages: any;
+  @Input() config: string;
   books: Book[];
   book: Book;
   loadingSubject = new BehaviorSubject<boolean>(false);
   loading$:Observable<boolean> = this.loadingSubject.asObservable();
   public form: FormGroup;
 
-  constructor(private fb: FormBuilder, private booksService:BooksService, private messageService:MessageService) { }
+  constructor(private fb: FormBuilder, private booksService:BooksService, 
+    private messageService:MessageService, private configurationService:ConfigurationService) { }
 
   ngOnInit() {
-    this.config = JSON.parse(this.config);
-    this.apiUrl = this.config["apiUrl"];
-    this.messages = this.config["messages"];
+    this.configurationService.init(this.config);
 
     this.form = this.fb.group({
       isbn: ['', Validators.required],
@@ -43,7 +42,7 @@ export class CrudExampleComponent implements OnInit {
 
   loadBooks() {
     this.loadingSubject.next(true);
-    this.booksService.list(this.apiUrl).pipe(
+    this.booksService.listBooks().pipe(
       finalize(() => this.loadingSubject.next(false))
     ).subscribe(
       books => this.books = books
@@ -53,7 +52,7 @@ export class CrudExampleComponent implements OnInit {
   save() {
     this.loadingSubject.next(true);
     let book:Book = <Book>this.form.value;
-    this.booksService.put(this.apiUrl, book).pipe(
+    this.booksService.putBook(book).pipe(
       finalize(() => this.loadingSubject.next(false))
     ).subscribe(
       success => {
@@ -67,7 +66,7 @@ export class CrudExampleComponent implements OnInit {
 
   delete(book: Book) {
     this.loadingSubject.next(true);
-    this.booksService.delete(this.apiUrl, book.isbn).pipe(
+    this.booksService.deleteBook(book.isbn).pipe(
       finalize(() => this.loadingSubject.next(false))
     ).subscribe(
       success => {

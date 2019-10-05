@@ -4,7 +4,6 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Book } from './Book';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { REST_PATH } from '../http-interceptors/PortletInterceptor';
 
 export interface Success {
   message:string;
@@ -15,10 +14,8 @@ export class BooksService {
   
   constructor(private http: HttpClient, private messageService:MessageService) { }
   
-  public list(apiUrl: string): Observable<Book[]> {
-    return this.http.get<Book[]>(apiUrl, {
-      params: new HttpParams().set(REST_PATH, `/books`)
-    }).pipe(
+  public listBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(`/books`).pipe(
       catchError(error => {
         this.messageService.error(error.error["message"]);
         return of([]);
@@ -26,10 +23,8 @@ export class BooksService {
     );
   }
 
-  public put(apiUrl: string, book: Book): Observable<Success> {
-    return this.http.put<Success>(apiUrl, book, { 
-      params: new HttpParams().set(REST_PATH, `/book/${book.isbn}`)
-    }).pipe(
+  public putBook(book: Book): Observable<Success> {
+    return this.http.put<Success>(`/book/${book.isbn}`, book).pipe(
       catchError(error => {
         this.messageService.error(error.error["message"]);
         return of(null);
@@ -37,10 +32,8 @@ export class BooksService {
     );
   }
 
-  public delete(apiUrl:string, isbn:string) : Observable<Success> {
-    return this.http.delete<Success>(apiUrl, { 
-      params: new HttpParams().set(REST_PATH, `/book/${isbn}`)
-    }).pipe(
+  public deleteBook(isbn:string) : Observable<Success> {
+    return this.http.delete<Success>(`/book/${isbn}`).pipe(
       catchError(error => {
         this.messageService.error(error.error["message"]);
         return of(null);
