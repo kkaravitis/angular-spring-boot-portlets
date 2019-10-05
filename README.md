@@ -5,7 +5,8 @@ Every portlet is in wars folder and in modules folder there are the services api
 ## Books catalog example
 A basic crud application where only authenticated users of portal can view the stored books on database and can add, update or delete a book of them.
 
-This application leverages the power of angular custom elements and the powerful capabilities of Spring 5 Rest controller.
+This portlet leverages the power of angular custom elements and the powerful capabilities of Spring 5 Rest controller.
+
 <img src=screenshots/authorized.png />
 
 ## How to build and deploy the modules
