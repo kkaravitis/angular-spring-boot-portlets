@@ -12,7 +12,6 @@ import { ConfigurationService } from '../configuration.service';
   templateUrl: './crud-example.component.html',
   styleUrls: ['./crud-example.component.css'],
   providers: [
-    ConfigurationService,
     MessageService, 
     BooksService
   ]

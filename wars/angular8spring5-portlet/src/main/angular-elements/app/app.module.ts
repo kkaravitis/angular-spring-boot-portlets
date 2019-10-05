@@ -12,6 +12,7 @@ import { CrudExampleComponent } from './crud-example/crud-example.component';
 import { MessagesComponent } from './messages/messages.component';
 import { httpInterceptorProviders } from './http-interceptors';
 import {createCustomElement} from '@angular/elements';
+import { ConfigurationService } from './configuration.service';
 
 @NgModule({
   declarations: [
@@ -31,17 +32,19 @@ import {createCustomElement} from '@angular/elements';
     FontAwesomeModule
   ],
   providers: [
+    ConfigurationService,
     httpInterceptorProviders
   ],
   entryComponents: [
     CrudExampleComponent
   ],
    //Uncomment bootstrap to run the TestComponent as an independent app 
-   // bootstrap: [TestComponent]
+   //bootstrap: [TestComponent]
 })
 
 export class AppModule {
   // Comment out the constructor and ngDoBootstrap method when you want to bootstrap the TestComponent.
+  
   constructor(private injector: Injector) {
       customElements.define('crud-example', createCustomElement(CrudExampleComponent, { injector }));
   }

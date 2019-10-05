@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';;
 import { BooksService } from '../crud-example/books.service';
 import { MessageService } from '../messages/message.service';
+import { httpInterceptorProviders } from '../http-interceptors';
 
 @Component({
   selector: 'app-test',
   templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css'],
-  providers:[MessageService, BooksService]
+  styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
 

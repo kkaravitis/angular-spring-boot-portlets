@@ -7,8 +7,9 @@
 		<icon>/icon.png</icon>
 		<instanceable>true</instanceable>
 		<header-portlet-css>/css/deeppurple-amber.css</header-portlet-css>
-		<footer-portlet-css>/css/portlet-angular-elements.css</footer-portlet-css>
-		<footer-portlet-javascript>/js/portlet-angular-elements.js</footer-portlet-javascript>
+		<footer-portlet-css>/css/crud-example.css</footer-portlet-css>
+		<footer-portlet-javascript>/js/runtime.js</footer-portlet-javascript>
+		<footer-portlet-javascript>/js/crud-example.js</footer-portlet-javascript>
 	</portlet>
 	<role-mapper>
 		<role-name>administrator</role-name>

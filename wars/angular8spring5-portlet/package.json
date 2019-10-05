@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build:elements": "ng build --prod --output-hashing none && node elements-build.js",
+    "build:portlet": "ng build --prod --output-hashing none && node portlet-build.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
