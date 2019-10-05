@@ -1,9 +1,10 @@
 <div class="spinner-container" *ngIf="loading$ | async">
    <mat-spinner></mat-spinner>
 </div>
-<div class="container">
-    <form [formGroup]="form" (ngSubmit)="save()">
-        <div class="example-container">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <form [formGroup]="form" (ngSubmit)="save()">
+            <div class="example-container">
                 <mat-form-field>
                         <input matInput placeholder="ISBN" formControlName="isbn">
                         <mat-error *ngIf="form.get('isbn').invalid">Isbn is required</mat-error>
@@ -16,23 +17,32 @@
                         <input matInput placeholder="Author" formControlName="author">
                         <mat-error *ngIf="form.get('author').invalid">Author is required'</mat-error>
                 </mat-form-field>
-        </div>
-        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
-    </form>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Save</button>
+        </form>
+    </div>
 
-    <app-messages></app-messages>
+    <div class="row-fluid">
+        <app-messages></app-messages>
+    </div>
 
     <hr>
-    <mat-card *ngFor="let book of books">
-        <div class="select-area" (click) = "select(book)">
-            <mat-card-title>{{book.title}}</mat-card-title>
-            <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
-            <mat-card-subtitle>isbn: {{book.isbn}}</mat-card-subtitle>
-        </div>
-        <mat-card-actions>
-            <button mat-stroked-button (click) = "delete(book)">Delete</button>
-        </mat-card-actions>
-    </mat-card>
+
+    <h2>Catalog</h2>
+
+    <div class="row-fluid">
+        <mat-card *ngFor="let book of books">
+            <div class="select-area" (click) = "select(book)">
+                <mat-card-title>{{book.title}}</mat-card-title>
+                <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+                <mat-card-subtitle>isbn: {{book.isbn}}</mat-card-subtitle>
+            </div>
+            <mat-card-actions>
+                <button mat-stroked-button (click) = "delete(book)">Delete</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
 </div>
 
 
