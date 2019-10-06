@@ -33,13 +33,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author Konstantinos Karavitis
  **/
 public abstract class AbstractAngularPortlet extends GenericPortlet {
-	public static final String SYSTEM_ERROR_KEY = "application.error.fatal";
-	public static final String VIEW_TEMPLATE_PORTLET_INIT_PARAM = "view-template";
-	public static final String PORTLET_XML_APPLICATION_CONTEXT = "portletContext.xml";
-	public static final String ANGULAR_CONFIGURATION_PROPERTY = "config";
-	public static final String REST_SERVLET_URL_PATTERN_PATH = "/rest";
-	public static final String REST_SERVICE_PATH_PARAM = "rest_path";
-	
 	private String viewTemplate;
 	private ClassPathXmlApplicationContext context;
 	private Logger logger;
@@ -51,8 +44,8 @@ public abstract class AbstractAngularPortlet extends GenericPortlet {
 	@Override
 	public void init() throws PortletException {
 		logger = LoggerFactory.getLogger(this.getClass());
-		viewTemplate = getPortletConfig().getInitParameter(VIEW_TEMPLATE_PORTLET_INIT_PARAM);
-		context = new ClassPathXmlApplicationContext(PORTLET_XML_APPLICATION_CONTEXT);
+		viewTemplate = getPortletConfig().getInitParameter(Constants.VIEW_TEMPLATE);
+		context = new ClassPathXmlApplicationContext(Constants.PORTLET_XML_APPLICATION_CONTEXT);
 		super.init();
 	}
 	
@@ -68,7 +61,7 @@ public abstract class AbstractAngularPortlet extends GenericPortlet {
 			String apiUrl = resourceURL.toString();
 			AngularPortletConfig config = createAngularPortletConfiguration(apiUrl, request, response);
 			String jsonConfig = objectMapper.writeValueAsString(config);
-			request.setAttribute(ANGULAR_CONFIGURATION_PROPERTY, jsonConfig);
+			request.setAttribute(Constants.CONFIG, jsonConfig);
 			getPortletContext().getRequestDispatcher(viewTemplate).include(request, response);
 		} catch (Exception exception) {
 			throw new PortletException(exception);
@@ -86,9 +79,8 @@ public abstract class AbstractAngularPortlet extends GenericPortlet {
 		HttpServletRequest portalRequest = PortalUtil
 				.getOriginalServletRequest(PortalUtil.getHttpServletRequest(request));
 		
-		String dispatchUrl = String.format("%s%s", REST_SERVLET_URL_PATTERN_PATH,
-				portalRequest.getParameter(REST_SERVICE_PATH_PARAM));
-		String restServiceHttpMethod = portalRequest.getParameter("rest_method");
+		String dispatchUrl = Constants.URI_PATTERN + portalRequest.getParameter(Constants.REST_PATH);
+		String restServiceHttpMethod = portalRequest.getParameter(Constants.REST_METHOD);
 		getPortletContext().getRequestDispatcher(dispatchUrl).forward(request, response);
 	}
 	
