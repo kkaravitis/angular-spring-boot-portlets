@@ -13,7 +13,7 @@
 **/.web_bundle_build
 .gradle
 .idea
-/bundles
+**/bundles
 /gradle-*.properties
 /plugins-sdk/**/classes
 /plugins-sdk/**/ivy.xml.MD5
