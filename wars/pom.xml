@@ -10,7 +10,18 @@
 	<artifactId>com-wordpress-kkaravitis-portal-wars</artifactId>
 	<name>com-wordpress-kkaravitis-portal Wars</name>
 	<packaging>pom</packaging>
-  <modules>
-	  <module>books-catalog-portlet</module>
-  </modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>1.5.6.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<modules>
+		<module>books-catalog-portlet</module>
+	</modules>
 </project>
