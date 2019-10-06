@@ -1,4 +1,4 @@
-# Angular 8 with Spring boot 2 jsr286 or later portlet 
+# Angular 8 with Spring boot 2 portlets on Liferay 7.2
 Examples for creating secure jsr286 or later restfull portlets on liferay 7.2 with angular 8 and Spring boot 2.
 Every portlet is in wars folder and in modules folder there are the services apis produced by service builder.
 
