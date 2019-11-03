@@ -9,6 +9,23 @@ This portlet leverages the power of angular custom elements and the powerful cap
 
 <img src=screenshots/authorized.png />
 
+## Download and install the Liferay Portal 7.2 server.
+After you have cloned the project, open a terminal to the angular-spring-boot-portlets folder and run
+
+<code>mvn bundle-support:init</code>
+
+The above command downloads the Liferay Portal specified in pom.xml version (7.2) from the specified repository
+
+(https://releases-cdn.liferay.com/portal/7.2.0-ga1/liferay-ce-portal-tomcat-7.2.0-ga1-20190531153709761.tar.gz). 
+
+Now you have a complete development environment to  play with this project.  
+
+For more information about setting up a liferay development environment refer to the following links
+
+https://portal.liferay.dev/docs/7-0/reference/-/knowledge_base/r/bundle-support-plugin
+
+https://portal.liferay.dev/docs/7-0/tutorials/-/knowledge_base/t/tooling
+
 ## How to build and deploy the modules
 1) Install the npm dependencies to angular app by running <br/>
 <code>npm install --prefix wars/books-catalog-portlet</code>
